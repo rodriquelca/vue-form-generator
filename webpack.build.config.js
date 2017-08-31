@@ -1,6 +1,5 @@
 var webpack = require("webpack");
 var version = require("./package.json").version;
-var banner = "/**\n" + " * vue-form-generator v" + version + "\n" + " * https://github.com/icebob/vue-form-generator\n" + " * Released under the MIT License.\n" + " */\n";
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var StatsPlugin = require("stats-webpack-plugin");
 
@@ -17,9 +16,9 @@ var loaders = [
 ];
 var cssFileName;
 if (process.env.FULL_BUNDLE !== "false") {
-	cssFileName = "vfg.css";
+	cssFileName = "next-form.css";
 } else {
-	cssFileName = "vfg-core.css";
+	cssFileName = "next-form-core.css";
 }
 
 module.exports = [
@@ -27,8 +26,8 @@ module.exports = [
 		entry: "./src/index.js",
 		output: {
 			path: "./dist",
-			filename: "vfg.js",
-			library: "VueFormGenerator",
+			filename: "next-form.js",
+			library: "NextForm",
 			libraryTarget: "umd"
 		},
 
@@ -44,9 +43,7 @@ module.exports = [
 				}
 			}),
 			new webpack.optimize.DedupePlugin(),
-			new webpack.BannerPlugin(banner, {
-				raw: true
-			}),
+		
 			new ExtractTextPlugin(cssFileName, { allChunks: true }),
 			new StatsPlugin("../stats.json", {
 				chunkModules: true

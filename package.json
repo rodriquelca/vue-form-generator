@@ -1,12 +1,12 @@
 {
-  "name": "vue-form-generator",
+  "name": "next-form",
   "version": "2.0.0",
-  "description": "A schema-based form generator component for Vue.js",
-  "homepage": "https://github.com/icebob/vue-form-generator",
-  "main": "dist/vfg.js",
+  "description": "next-form -> the next form in vuejs",
+  "homepage": "",
+  "main": "dist/nextform.js",
   "scripts": {
     "prebuild": "npm run test",
-    "build:core": "cross-env FULL_BUNDLE=false webpack --progress --config webpack.build.config.js --define process.env.FULL_BUNDLE=false --output-filename=vfg-core.js",
+    "build:core": "cross-env FULL_BUNDLE=false webpack --progress --config webpack.build.config.js --define process.env.FULL_BUNDLE=false --output-filename=next-form.js",
     "build:full": "cross-env FULL_BUNDLE=true  webpack --progress --config webpack.build.config.js --define process.env.FULL_BUNDLE=true",
     "build": "npm run build:core && npm run build:full",
     "dev": "webpack-dev-server --config webpack.dev.config.js --inline --hot --content-base dev/",
@@ -31,13 +31,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/icebob/vue-form-generator.git"
+    "url": ""
   },
   "files": [
-    "dist/vfg.js",
-    "dist/vfg.css",
-    "dist/vfg-core.js",
-    "dist/vfg-core.css",
+    "dist/nextform.js",
+    "dist/nextform.css",
+    "dist/nextform-core.js",
+    "dist/nextform-core.css",
     "src"
   ],
   "author": "Icebob",

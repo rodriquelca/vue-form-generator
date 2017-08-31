@@ -49,7 +49,7 @@ div.vue-form-generator(v-if='schema != null')
 		let compName = key.replace(/^\.\//, "").replace(/\.vue/, "");
 		fieldComponents[compName] = coreFields(key);
 	});
-
+/*
 	if (process.env.FULL_BUNDLE) {  // eslint-disable-line
 		let Fields = require.context("./fields/optional", false, /^\.\/field([\w-_]+)\.vue$/);
 
@@ -58,7 +58,7 @@ div.vue-form-generator(v-if='schema != null')
 			fieldComponents[compName] = Fields(key);
 		});
 	}
-
+*/
 
 
 	export default {
